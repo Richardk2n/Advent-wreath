@@ -31,8 +31,8 @@ void loop() {
   if(Serial.available()){
       char serialInput = Serial.read();
       if (serialInput == 't') {
-        unsigned long t = Serial.parseInt();
-        setTime(t);
+        unsigned long ti = Serial.parseInt();
+        setTime(ti);
         y = year(centralEurope.toLocal(now()));
         int d = (y-2000)%28;
         int r = 24;
